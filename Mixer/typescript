@@ -1,0 +1,10 @@
+Script started on Thu Oct  1 10:01:54 2015
+bash-4.3$ ./mixer 
+(2015-10-01 17:01:58) [INFO    ] Crow/0.1 server is running, local port 8085
+(2015-10-01 17:03:08) [INFO    ] Request: 127.0.0.1:55027 0x7fd482800000 HTTP/1.1 GET /mix
+(2015-10-01 17:03:08) [INFO    ] Response: 0x7fd482800000 /mix 200 0
+^C(2015-10-01 17:03:41) [INFO    ] Exiting.
+bash-4.3$ exit
+exit
+
+Script done on Thu Oct  1 10:03:44 2015

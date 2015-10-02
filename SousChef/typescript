@@ -1,0 +1,11 @@
+Script started on Thu Oct  1 10:02:04 2015
+bash-4.3$ go run souschef.go
+I am the souschef har de har har
+grabbing fresh ingredients for the bistro from the kitchen fridge
+bistro ingredient_packs supplies low, restocking
+bistro doughballs supplies low, restocking
+^Cexit status 2
+bash-4.3$ exit
+exit
+
+Script done on Thu Oct  1 10:03:39 2015

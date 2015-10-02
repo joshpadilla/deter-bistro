@@ -1,0 +1,14 @@
+Script started on Thu Oct  1 10:02:46 2015
+bash-4.3$ ./waiter.py 
+Waiter is waiting for customer
+Bottle v0.12.8 server starting up (using WSGIRefServer())...
+Listening on http://localhost:8080/
+Hit Ctrl-C to quit.
+
+Taking order for 47 pies
+Got 47 pizzas from the pizza chef
+127.0.0.1 - - [01/Oct/2015 10:03:08] "GET /orderPie?count=47 HTTP/1.1" 200 2
+^Cbash-4.3$ exit
+exit
+
+Script done on Thu Oct  1 10:03:27 2015

@@ -1,0 +1,12 @@
+Script started on Thu Oct  1 10:02:30 2015
+bash-4.3$ java -cp ".:/Users/ry/Desktop/ddto/_WoodbrickOven/*" WoodbrickOven
+[Thread-0] INFO org.eclipse.jetty.util.log - Logging initialized @190ms
+[Thread-0] INFO spark.webserver.JettySparkServer - == Spark has ignited ...
+[Thread-0] INFO spark.webserver.JettySparkServer - >> Listening on 0.0.0.0:8082
+[Thread-0] INFO org.eclipse.jetty.server.Server - jetty-9.3.2.v20150730
+[Thread-0] INFO org.eclipse.jetty.server.ServerConnector - Started ServerConnector@545458ba{HTTP/1.1,[http/1.1]}{0.0.0.0:8082}
+[Thread-0] INFO org.eclipse.jetty.server.Server - Started @301ms
+^Cbash-4.3$ exit
+exit
+
+Script done on Thu Oct  1 10:03:34 2015

@@ -1,0 +1,8 @@
+Script started on Thu Oct  1 10:02:55 2015
+bash-4.3$ node customer.js
+Asking waiter for 47 pizzas
+Received 47 pies from our waiter
+bash-4.3$ exit
+exit
+
+Script done on Thu Oct  1 10:03:23 2015
