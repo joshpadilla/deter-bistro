@@ -5,8 +5,8 @@ files:
     destination: /usr/local/deter-bistro
 hooks:
   AfterInstall:
-    - location: deployment/stop.sh
+    - location: /usr/local/deter-bistro/AWS-Deploy/stop.sh
       runas: root
   ApplicationStart:
-    - location: deployment/start.sh
+    - location: /usr/local/deter-bistro/AWS-Deploy/start.sh
       runas: root
