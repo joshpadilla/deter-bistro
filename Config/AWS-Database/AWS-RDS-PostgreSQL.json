@@ -1,0 +1,23 @@
+{
+  "AWSTemplateFormatVersion" : "2010-09-09",
+
+  "Description" : "AWS CloudFormation RDS PostgreSQL Template",
+
+  "Resources" : {
+    "DeterBistroMySQLDB" : {
+      "Type" : "AWS::RDS::DBInstance",
+      "Properties" : {
+        "DBName" : { "Ref" : "DBName" },
+		"AllocatedStorage" : "5",
+        "DBInstanceClass" : "db.t1.micro",
+        "Engine" : "PostgreSQL",
+        "EngineVersion" : "9.4",
+        "MasterUsername" : "BistroMaster",
+        "MasterUserPassword" : "OmittedForSecurity",
+        "Tags" : [ { "Key" : "Name", "Value" : "PostgresSQL Database" } ]
+     },
+     "DeletionPolicy" : "Snapshot"
+      }
+    }
+  }
+}

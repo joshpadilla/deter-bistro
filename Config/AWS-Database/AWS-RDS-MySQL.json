@@ -9,7 +9,7 @@
       "Properties" : {
         "DBName" : { "Ref" : "DBName" },
 		"AllocatedStorage" : "5",
-        "DBInstanceClass" : "db.m1.micro",
+        "DBInstanceClass" : "db.t1.micro",
         "Engine" : "MySQL",
         "EngineVersion" : "5.6",
         "MasterUsername" : "BistroMaster",
