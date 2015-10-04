@@ -1,5 +1,6 @@
-TRAVIS CI YAML
-CPP
+##TRAVIS CI YAML
+
+##MIXER C++ with Crow Microframework
 language: cpp
 sudo: true
 compiler:
@@ -21,27 +22,21 @@ after_success:
   - cd ..
   - if [ "PUSH_COVERAGE" == "ON" ]; then coveralls --gcov gcov-4.8 -i include --gcov-options '\-lp'; fi
 
-install: make get-deps
-#./configure && make && make test
-
-
-
-CROW
-https://github.com/ipkn/crow.git
-sudo apt-get install build-essential libtcmalloc-minimal4
-sudo ln -s /usr/lib/libtcmalloc_minimal.so.4 /usr/lib/libtcmalloc_minimal.so
-
-install:
-  - if [ "$PUSH_COVERAGE" == "ON" ]; then pip install --user git+git://github.com/eddyxu/cpp-coveralls.git; fi
-before_script:
-  - export CXX=$COMPILER CC=$CCOMPILER
-  - mkdir build
-  - cd build
-  - cmake --version
-  - cmake ..
-
-sudo apt-get install libboost-all-dev
-sudo apt-get install cmake
+##install: make get-deps
+##./configure && make && make test
+##https://github.com/ipkn/crow.git
+##sudo apt-get install build-essential libtcmalloc-minimal4
+##sudo ln -s /usr/lib/libtcmalloc_minimal.so.4 /usr/lib/libtcmalloc_minimal.so
+##install:
+##  - if [ "$PUSH_COVERAGE" == "ON" ]; then pip install --user git+git://github.com/eddyxu/cpp-coveralls.git; fi
+##before_script:
+##  - export CXX=$COMPILER CC=$CCOMPILER
+##  - mkdir build
+##  - cd build
+##  - cmake --version
+##  - cmake ..
+##sudo apt-get install libboost-all-dev
+##sudo apt-get install cmake
 
 
 
