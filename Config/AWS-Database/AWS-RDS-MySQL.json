@@ -1,13 +1,12 @@
 {
   "AWSTemplateFormatVersion" : "2010-09-09",
 
-  "Description" : "DeterBistro bistrofridge AWS MySQL database service instance.",
-
+  "Description" : "AWS MySQL database bistrofridge",
   "Resources" : {
     "DeterBistroMySQLDB" : {
       "Type" : "AWS::RDS::DBInstance",
       "Properties" : {
-        "DBName" : { "Ref" : "DBName" },
+        "DBName" : { "Ref" : "" },
 		"AllocatedStorage" : "5",
         "DBInstanceClass" : "db.t1.micro",
         "Engine" : "MySQL",
