@@ -1,4 +1,4 @@
-**DETERBISTRO AWS NETWORK RESOURCES**  
+**DETER-BISTRO AWS NETWORK RESOURCES**  
 DeterBistro Amazon Web Service (AWS) network resources such as SSH Key Pairs, IAM Roles, Security
 Groups, Network ACLs, CIDR Blocks, Virtual Private Clouds, Public/Private Subnets, NAT, Route Tables, Internet Gateways, Network Placement Groups, Elastic IPs, Autoscaling Groups, Elastic Load Balancers and DNS records can be created manually or programmatically with AWS CloudFormation JSON templates.  
 
