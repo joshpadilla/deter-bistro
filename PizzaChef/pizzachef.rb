@@ -45,7 +45,7 @@ server.mount_proc '/pieRequest' do |req, res|
 
   
   #bake the pies
-  uri = URI.parse("http://woodbrick.deterlab.net:8082")
+  uri = URI.parse("http://woodbrick.deter-bistro.net:8082")
   http = Net::HTTP.new(uri.host, uri.port)
   request = Net::HTTP::Get.new("/cook")
   response = http.request(request)
