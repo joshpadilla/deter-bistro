@@ -4,4 +4,4 @@ Groups, Network ACLs, CIDR Blocks, Virtual Private Clouds, Public/Private Subnet
 
 DeterBistro defines, modifies and manages AWS resources and infrastructure as code with CloudFormation JSON templates. This allows consistent, repeatable, code-described and version controlled network and security resources.  
 
-All resources are defined in the **"AWS-Network.json"** file with lists of key, value pairs and JSON standard syntax.
+All resources are defined in the **"AWS-Network.json"** file in the **"deter-bistro/Config/AWS-Network"** directory with lists of key, value pairs and standard JSON syntax.
