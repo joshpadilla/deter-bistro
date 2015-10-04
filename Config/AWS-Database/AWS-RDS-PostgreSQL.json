@@ -1,10 +1,10 @@
 {
   "AWSTemplateFormatVersion" : "2010-09-09",
 
-  "Description" : "AWS CloudFormation RDS PostgreSQL Template",
+  "Description" : "DeterBistro kitchenfridge AWS PostgreSQL database service instance.",
 
   "Resources" : {
-    "DeterBistroMySQLDB" : {
+    "DeterBistroPostgreSQLDB" : {
       "Type" : "AWS::RDS::DBInstance",
       "Properties" : {
         "DBName" : { "Ref" : "DBName" },
