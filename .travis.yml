@@ -1,4 +1,5 @@
-##TRAVIS CI YAML
+##DETER-BISTRO TRAVIS CI YAML
+##AUTOMATED APP BUILDER/TESTER CONFIG
 
 ##MIXER C++ with Crow Microframework
 language: cpp
@@ -39,7 +40,7 @@ after_success:
 ##sudo apt-get install cmake
 
 
-
+##SOUSCHEF GOLANG 
 GOLANG
 EX1
 language: go
