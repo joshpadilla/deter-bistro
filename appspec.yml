@@ -1,0 +1,12 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /usr/local/deter-bistro
+hooks:
+  AfterInstall:
+    - location: deployment/stop.sh
+      runas: root
+  ApplicationStart:
+    - location: deployment/start.sh
+      runas: root
