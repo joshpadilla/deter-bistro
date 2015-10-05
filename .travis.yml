@@ -40,9 +40,7 @@ after_success:
 ##sudo apt-get install cmake
 
 
-##SOUSCHEF GOLANG 
-GOLANG
-EX1
+##SOUSCHEF GOLANG
 language: go
 go: 
  - 1.5.1
@@ -51,88 +49,83 @@ go:
 script:
  - go test -v ./...
 
-EX2
-language: go
-go:
-  - 1.3
-env:
-  - "PATH=/home/travis/gopath/bin:$PATH"
-before_install:
-  - go get github.com/mitchellh/gox
-  - gox -build-toolchain
-  - go get github.com/tcnksm/ghr
-  - go get github.com/axw/gocov/gocov
-  - go get github.com/mattn/goveralls
-  - go get code.google.com/p/go.tools/cmd/cover
-script:
-  - go test -v -covermode=count -coverprofile=coverage.out ./...
-  - goveralls -coverprofile=coverage.out -service travis-ci -repotoken $COVERALLS_TOKEN
-after_success:
-  - gox -output "dist/{{.OS}}_{{.Arch}}_{{.Dir}}"
-  - ghr --username tcnksm-sample --token $GITHUB_TOKEN --replace --prerelease --debug pre-release dist/
+##EX2
+##language: go
+##go:
+##  - 1.3
+##env:
+##  - "PATH=/home/travis/gopath/bin:$PATH"
+##before_install:
+##  - go get github.com/mitchellh/gox
+##  - gox -build-toolchain
+##  - go get github.com/tcnksm/ghr
+##  - go get github.com/axw/gocov/gocov
+##  - go get github.com/mattn/goveralls
+##  - go get code.google.com/p/go.tools/cmd/cover
+##script:
+##  - go test -v -covermode=count -coverprofile=coverage.out ./...
+##  - goveralls -coverprofile=coverage.out -service travis-ci -repotoken $COVERALLS_TOKEN
+##after_success:
+##  - gox -output "dist/{{.OS}}_{{.Arch}}_{{.Dir}}"
+##  - ghr --username tcnksm-sample --token $GITHUB_TOKEN --replace --prerelease --debug pre-release dist/
+##
+##EX3
+##language: go
+##sudo: false
+##before_script:
+##  - go vet ./...
+##install:
+##  # Add Godeps dependencies to GOPATH and PATH
+##  - export GOPATH="${TRAVIS_BUILD_DIR}/Godeps/_workspace:$GOPATH"
+##  - export PATH="${TRAVIS_BUILD_DIR}/Godeps/_workspace/bin:$PATH"
 
-EX3
-language: go
-sudo: false
-before_script:
-  - go vet ./...
-install:
-  # Add Godeps dependencies to GOPATH and PATH
-  - export GOPATH="${TRAVIS_BUILD_DIR}/Godeps/_workspace:$GOPATH"
-  - export PATH="${TRAVIS_BUILD_DIR}/Godeps/_workspace/bin:$PATH"
-
-
-JAVA
-EX1
 language: java
-scala:
-- 2.10.4
 jdk:
-- oraclejdk8
 - oraclejdk7
-services: mongodb
-script:
-- sbt scoverage:test
-- sbt coveralls
-env:
-  global:
-  - MONGO_PORT=27017
-  - secure: d+Jo3HwjYCnpHLWFr0bsauv0/5OhKl0iSFlGlRo0Ybnv6ii9jo5qYUSV9gVXRFlypOfEmu3gCNzv6GxTLZsTivV38qpVJypDV0N1cGUl7nRmTanU0Ba9LjtusD6dCRqbfOhggdk4mNf7KFNJ6DA1NQHCRuwmOBCLtebu6WaMC5Y=
-  - secure: LumeI7Zr5Cpotm9pLv3F8116Vt5FwhITfnnqhTCA7iXcHVHVuUz+8mVk3PHuL45Nmbcpivc6B80DhFC5JqeXU3CCrftEETmH29A1uJlS6qkpfj6HjeN1yPVG4qCRWUM0Y/GlDkxH+DlTt5UCTPmRmR5OduLoZYT8iFnrE/74gfA=
-  - secure: IcZGkHw+qgLT/fHvw7Ifae7SRFybRFLXmA5zsaXBhKTSVTLTd7aTHrEau0+bkEBzk1Nu7SZKZMthV0JDJ+wwPCky5F7KLVX/Tqo9zJK/IJRqVKNtIRLUqb/9HlWyl11AgyZhE+6RcOATaEfDk1ncqye2ZkoKDlhOnTNZSqxCYBc=
-after_success:
-  - >
-      test "${TRAVIS_PULL_REQUEST}" = 'false' &&
-      test "${TRAVIS_JDK_VERSION}" = 'oraclejdk7' &&
-      sbt 'set credentials += Credentials("Sonatype Nexus Repository Manager", "oss.sonatype.org", System.getenv("SONATYPE_USER"), System.getenv("SONATYPE_PASS"))' publish
+install:  mvn ${JAVA} ${SPARK} -DskipTests=true -Dmaven.javadoc.skip=true -B -V install
 
-
-EX2
-language: java
-
-install: cd HermiT;mvn install -DskipTests=true;cd ..
-
-script: ant test-hard && cd HermiT && mvn test
-
-jdk:
-  - openjdk7
-
-notifications:
-  email:
-    - travis@russet.org.uk
-
-
-EX3
-language: java
-jdk:
-  - oraclejdk8
- 
-before_script:
-  - npm install -g grunt-cli
-  - npm install -g bower
-  - npm install -g tsd
- 
-script: ./gradlew test
+##EX2
+##services: mongodb
+##
+##language: java
+##
+##install: cd HermiT;mvn install -DskipTests=true;cd ..
+##
+##script: ant test-hard && cd HermiT && mvn test
+##
+##jdk:
+##  - openjdk7
+##
+##notifications:
+##  email:
+##    - travis@russet.org.uk
+##
+##script:
+##- sbt scoverage:test
+##- sbt coveralls
+##env:
+##  global:
+##  - MONGO_PORT=27017
+##  - secure: d+Jo3HwjYCnpHLWFr0bsauv0/5OhKl0iSFlGlRo0Ybnv6ii9jo5qYUSV9gVXRFlypOfEmu3gCNzv6GxTLZsTivV38qpVJypDV0N1cGUl7nRmTanU0Ba9LjtusD6dCRqbfOhggdk4mNf7KFNJ6DA1NQHCRuwmOBCLtebu6WaMC5Y=
+##  - secure: LumeI7Zr5Cpotm9pLv3F8116Vt5FwhITfnnqhTCA7iXcHVHVuUz+8mVk3PHuL45Nmbcpivc6B80DhFC5JqeXU3CCrftEETmH29A1uJlS6qkpfj6HjeN1yPVG4qCRWUM0Y/GlDkxH+DlTt5UCTPmRmR5OduLoZYT8iFnrE/74gfA=
+##  - secure: IcZGkHw+qgLT/fHvw7Ifae7SRFybRFLXmA5zsaXBhKTSVTLTd7aTHrEau0+bkEBzk1Nu7SZKZMthV0JDJ+wwPCky5F7KLVX/Tqo9zJK/IJRqVKNtIRLUqb/9HlWyl11AgyZhE+6RcOATaEfDk1ncqye2ZkoKDlhOnTNZSqxCYBc=
+##after_success:
+##  - >
+##      test "${TRAVIS_PULL_REQUEST}" = 'false' &&
+##      test "${TRAVIS_JDK_VERSION}" = 'oraclejdk7' &&
+##      sbt 'set credentials += Credentials("Sonatype Nexus Repository Manager", "oss.sonatype.org", System.getenv("SONATYPE_USER"), System.getenv("SONATYPE_PASS"))' publish
+##
+##EX3
+##language: java
+##jdk:
+##  - oraclejdk8
+## 
+##before_script:
+##  - npm install -g grunt-cli
+##  - npm install -g bower
+##  - npm install -g tsd
+## 
+##script: ./gradlew test
 
 
 PYTHON
