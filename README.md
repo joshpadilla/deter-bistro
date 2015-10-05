@@ -1,10 +1,9 @@
 **ISI DETER-BISTRO.NET SPECS**  
 Create build, deploy, test infrastructure  
 Use GitHub, Travis CI, AWS CloudFormation/CodeDeploy  
-Auto pull all dependencies (From Upstream)   
-Travis CI  
+Auto pull all dependencies (From Upstream - Travis CI)   
 Provide built in path for upgrades (Travis CI)  
-Functioning digital pizza prod system (Runs on AWS)  
+Functioning digital pizza prod system (Runs on AWS EC2 Service)  
 Deploy Prod to AWS (Via CloudFormation & CodeDeply)  
 Partially automated tests (Lang Libs, Travis CI)  
 Config env vars for component commun  
