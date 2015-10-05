@@ -79,6 +79,7 @@ script:
 ##  - export GOPATH="${TRAVIS_BUILD_DIR}/Godeps/_workspace:$GOPATH"
 ##  - export PATH="${TRAVIS_BUILD_DIR}/Godeps/_workspace/bin:$PATH"
 
+##WOODBRICK-OVEN JAVA with Spark Framework
 language: java
 jdk:
 - oraclejdk7
@@ -127,9 +128,8 @@ install:  mvn ${JAVA} ${SPARK} -DskipTests=true -Dmaven.javadoc.skip=true -B -V 
 ## 
 ##script: ./gradlew test
 
-
+##WAITER PYTHON with Bottle & Requests Frameworks
 PYTHON
-EX1
 language: python
 python:
   - "2.6"
