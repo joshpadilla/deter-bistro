@@ -1,6 +1,6 @@
 {
    "AWSTemplateFormatVersion": "2010-09-09",
-   "Description" : "CloudFormation Template for IAM Management",
+   "Description" : "CloudFormation Template  IAM Mgmt",
    "Resources": {
       "DeterBistro-EC2Instance": {
          "Type": "AWS::EC2::Instance",
